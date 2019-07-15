@@ -29,9 +29,9 @@
 
 </header>
 
-<script type="text/javascript">
 
-    {% block scripts %}
+<script type="text/javascript">
+    
     $(document).ready(function () {
         let rootURL = window.location;
         $("#my-btn-search").on("click", function () {
@@ -40,7 +40,8 @@
         });
 
     });
-    {% endblock %}
+    {% block scripts %}
+    {% endblock%}
 </script>
 
 

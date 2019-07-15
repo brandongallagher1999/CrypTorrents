@@ -1,16 +1,73 @@
 {% extends 'base.html' %}
 
+{% block scripts%}
+    $(document).ready(function () {
+        $("#btn-movie1").on("click", function () {
+            alert("{{movie1.magnet}}");
+        });
+        $("#btn-movie2").on("click", function () {
+            alert("{{movie2.magnet}}");
+        });
+        $("#btn-movie3").on("click", function () {
+            alert("{{movie3.magnet}}");
+        });
+    });
+
+{% endblock %}
 
 
 {% block content %}
-    <div id="my-query-display">
-        <div class="square">
-            <div class="profile">
-                <div class="poster">
+
+<div id="my-query-display">
+    <div class="square">
+        <div class="profile">
+            <div class="poster">
+            </div>
+            <div class="poster">
+                <div class="magnet_container">
+                    <div class="half_container">
+                        <p style="position: relative; left: 10px; color: blue; font-weight: bold; font-size: 20px;">
+                            {{movie1.title}}
+                        </p>
+                    </div>
+                    <div class="half_container">
+                        <div class="pirate_icon" id="btn-movie1">
+                        </div>
+                        <p style="bottom: 15%; position: relative; left: 100px; font-weight: bold; font-size: 36px;">
+                            MAGNET
+                        </p>
+                    </div>
                 </div>
-                <div class="poster">
+                <div class="magnet_container">
+                    <div class="half_container">
+                        <p style="position: relative; left: 10px; color: blue; font-weight: bold; font-size: 20px;">
+                            {{movie2.title}}
+                        </p>
+                    </div>
+                    <div class="half_container">
+                        <div class="pirate_icon" id="btn-movie2">
+                        </div>
+                        <p style="bottom: 15%; position: relative; left: 100px; font-weight: bold; font-size: 36px;">
+                            MAGNET
+                        </p>
+                    </div>
+                </div>
+                <div class="magnet_container">
+                    <div class="half_container">
+                        <p style="position: relative; left: 10px; color: blue; font-weight: bold; font-size: 20px;">
+                            {{movie3.title}}
+                        </p>
+                    </div>
+                    <div class="half_container">
+                        <div class="pirate_icon" id="btn-movie3">
+                        </div>
+                        <p style="bottom: 15%; position: relative; left: 100px; font-weight: bold; font-size: 36px;">
+                            MAGNET
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 {% endblock %}

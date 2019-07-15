@@ -27,7 +27,7 @@ def movie_lookup(request, movie):
     obj = {}
 
     for torrent in website.search(movie).order(ORDERS.SEEDERS.DES):
-        if counter < 2:
+        if counter <= 2:
             temp = Movie(title= str(torrent.title), magnet=str(torrent.magnet_link))
             temp.save()
             temp_movie = Movie.objects.get(id=temp.id)
