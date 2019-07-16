@@ -1,6 +1,6 @@
 @echo off
 
-set "VIRTUAL_ENV=C:\Users\crypt\Desktop\CRYPTO~2\venv"
+set "VIRTUAL_ENV=C:\Users\crypt\Desktop\CrypTorrents\"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
