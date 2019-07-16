@@ -1,9 +1,6 @@
-from django.http import HttpResponse
+
 from django.shortcuts import render
 from tpb import TPB
-from tpb import CATEGORIES, ORDERS
-from django.db import models
-from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 
@@ -22,7 +19,7 @@ def movies_view(request, *args, **kwargs):
 def movie_lookup(request, movie):
    
     website = TPB("https://thepiratebay.org/") #Base URL for ThePirateBay
-
+    
     counter = 0
     obj = {}
 
