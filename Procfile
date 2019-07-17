@@ -1,0 +1,1 @@
+web: python src/crypto/manage.py runserver
