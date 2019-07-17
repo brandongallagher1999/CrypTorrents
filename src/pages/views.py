@@ -2,7 +2,7 @@
 from django.shortcuts import render
 from tpb import TPB
 from tpb import ORDERS
-
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 from .models import Movie
@@ -16,7 +16,7 @@ def home_view(request, *args, **kwargs):
 def movies_view(request, *args, **kwargs):
     return render(request, "movies.html", {})
 
-
+@csrf_exempt
 def movie_lookup(request, movie):
    
     website = TPB("https://thepiratebay.org/") #Base URL for ThePirateBay
@@ -32,5 +32,4 @@ def movie_lookup(request, movie):
             obj["movie" + str(counter + 1)] = temp_movie
         counter += 1
         
-
     return render(request, "movies.html", obj)
