@@ -26,7 +26,7 @@ SECRET_KEY = "riygpyyxxackq)#hij!!b(0^_2447zv8nip3a(65gr(qr#7rc1"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -130,6 +130,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 
 db_from_env = dj_database_url.config(conn_max_age=500)
