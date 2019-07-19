@@ -1,4 +1,4 @@
-# Project Title
+# CrypTorrents
 
 A torrenting website that allows users to search for any torrent then index's ThePirateBay using ThePirateBay API to find the top 3 most relevant torrents along with a relevant picture (be it a poster for a movie, or game poster, software logo, etc).
 
