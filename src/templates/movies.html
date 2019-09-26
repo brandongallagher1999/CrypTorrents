@@ -3,13 +3,13 @@
 {% block scripts%}
     $(document).ready(function () {
         $("#btn-movie1").on("click", function () {
-            alert("{{movie1.magnet}}");
+            prompt("Copy this with CTRL + C", "{{movie1.magnet}}");
         });
         $("#btn-movie2").on("click", function () {
-            alert("{{movie2.magnet}}");
+            prompt("Copy this with CTRL + C", "{{movie2.magnet}}");
         });
         $("#btn-movie3").on("click", function () {
-            alert("{{movie3.magnet}}");
+            prompt("Copy this with CTRL + C", "{{movie3.magnet}}");
         });
     });
 
